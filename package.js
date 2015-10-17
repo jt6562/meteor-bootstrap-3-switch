@@ -1,11 +1,15 @@
 Package.describe({
-    summary: "Bootstrap 3 switch icons"
+  name: 'jt6562:bootstrap-3-switch',
+  version: '3.3.2',
+  summary: 'Bootstrap3 switch',
+  git: 'https://github.com/jt6562/meteor-bootstrap-3-switch.git',
+  documentation: 'README.md'
 });
 
 Package.on_use(function (api) {
     api.use('jquery', 'client');
     api.add_files([
-        'lib/bootstrap-switch.js'
-        ,'css/bootstrap-switch.css'
+        'js/bootstrap-switch.min.js',
+        'css/bootstrap-switch.min.css'
     ], 'client');
 });

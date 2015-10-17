@@ -6,10 +6,23 @@ It is basically [Tim Heckels meteor-bootstrap-switch](https://github.com/TimHeck
 
 ##How to use?
 
-1. Install [meteorite](https://github.com/oortcloud/meteorite)
-2. `mrt add bootstrap-3-switch`
+###Install
+bash: `meteor add jt6562:bootstrap-3-switch`
 
-Unlike the original documentation, you must invoke the switches in your appropriate `Template.name.rendered` callback:
+###Html
+<input type="checkbox" name="switch">
 
-    $('.make-switch').bootstrapSwitch();
-    
+###Convert input tag to switch
+'''
+    $("[name='switch']").bootstrapSwitch({size: "small"});
+'''
+
+###event
+'''
+    $("[name='switch']").on('switchChange.bootstrapSwitch', function (event, data) {
+        var status = data === true ? 'on' : 'off';
+
+        Meteor.call('toggle', status);
+    }); 
+'''
+
