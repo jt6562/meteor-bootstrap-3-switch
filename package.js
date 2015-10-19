@@ -7,7 +7,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-    api.use('jquery', 'client');
+    api.versionsFrom('0.9.0');
+    api.use('jquery@1.9.0', 'client');
     api.add_files([
         'js/bootstrap-switch.min.js',
         'css/bootstrap-switch.min.css'
