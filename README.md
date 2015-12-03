@@ -7,22 +7,25 @@ It is basically [Tim Heckels meteor-bootstrap-switch](https://github.com/TimHeck
 ##How to use?
 
 ###Install
-bash: `meteor add jt6562:bootstrap-3-switch`
+```bash
+meteor add jt6562:bootstrap-3-switch
+```
 
-###Html
+###HTML
+```html
 <input type="checkbox" name="switch">
+```
 
 ###Convert input tag to switch
-'''
+```javascript
     $("[name='switch']").bootstrapSwitch({size: "small"});
-'''
+```
 
-###event
-'''
+###Event
+```javascript
     $("[name='switch']").on('switchChange.bootstrapSwitch', function (event, data) {
         var status = data === true ? 'on' : 'off';
 
         Meteor.call('toggle', status);
     }); 
-'''
-
+```
